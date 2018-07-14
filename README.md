@@ -5,7 +5,9 @@ Node v8.11.3
 
 Simple POST Echo Server. Sample Usage: 
 
-curl localhost:3000 \
+```
+curl localhost:3000/hello \
 	--request POST \
 	--data 'Hello World'
+```
 	
