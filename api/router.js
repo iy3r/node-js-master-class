@@ -1,10 +1,12 @@
 module.exports = {
 	"/": {
-		"GET": res => {
+		GET: res => {
 			res.writeHead(200)
 			res.end("Hello World API. To use, POST to /hello")
 		},
-		"POST": (res, buffer) => {
+	},
+	"/hello": {
+		POST: (res, buffer) => {
 			res.setHeader("Content-Type", "application/json")
 			res.writeHead(200)
 			res.end("You POST-ed:\n" + JSON.stringify(buffer))
